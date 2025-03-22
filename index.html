@@ -8,48 +8,56 @@
 </head>
 <body>
     <nav>
-    <div class="toggle-container">
-        <label class="switch">
-            <input type="checkbox" id="modeToggle">
-            <span class="slider round"></span>
-        </label>
-        <span id="modeLabel">Dark Mode</span>
-    </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="posts/post1.html">TikTok & Elections</a></li>
             <li><a href="posts/post2.html">Tweets & Gas Prices</a></li>
         </ul>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="modeLabel">Dark Mode</span>
+        </div>
     </nav>
-    <header>
+
+    <header class="hero">
         <h1>Raw & Redefined</h1>
-        <p class="subtitle">Answering questions with data, storytelling, and a touch of rebellion.</p>
+        <p class="subtitle">Where data meets curiosity. Real-world analysis, insights, and visual storytelling.</p>
     </header>
 
     <main class="post-list">
-        <div class="post-link">
+        <article class="post-link">
             <h2><a href="posts/post1.html">Can TikTok Predict Elections?</a></h2>
-            <p>Exploring the correlation between TikTok comment activity and election outcomes.</p>
-        </div>
-        <div class="post-link">
+            <p class="summary">
+                TikTok isn’t just a dance app—it’s a window into voter sentiment. This post explores whether spikes in TikTok comment activity and sentiment analysis can serve as leading indicators in election forecasting.
+            </p>
+            <a href="posts/post1.html" class="read-more">Read full post →</a>
+        </article>
+
+        <article class="post-link">
             <h2><a href="posts/post2.html">Are Gas Prices Tied to Tweets?</a></h2>
-            <p>Using tweet volume and gas price data to uncover predictive trends in public chatter.</p>
-        </div>
+            <p class="summary">
+                With public frustration often boiling over onto social media, we investigate if tweet volume and keyword frequency around gas prices can reliably forecast price trends. Spoiler: there's more signal than noise.
+            </p>
+            <a href="posts/post2.html" class="read-more">Read full post →</a>
+        </article>
     </main>
 
     <footer>
         <p>&copy; 2025 Raw & Redefined. All Rights Reserved.</p>
     </footer>
 
-<script>
-    const toggle = document.getElementById('modeToggle');
-    const label = document.getElementById('modeLabel');
-    const body = document.body;
+    <script>
+        const toggle = document.getElementById('modeToggle');
+        const label = document.getElementById('modeLabel');
+        const body = document.body;
 
-    toggle.addEventListener('change', function () {
-        body.classList.toggle('light-mode');
-        label.textContent = body.classList.contains('light-mode') ? 'Light Mode' : 'Dark Mode';
-    });
-</script>
+        toggle.addEventListener('change', function () {
+            body.classList.toggle('light-mode');
+            label.textContent = body.classList.contains('light-mode') ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
 </body>
 </html>

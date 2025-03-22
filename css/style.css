@@ -196,3 +196,34 @@ body.light-mode footer {
     background-color: #ddd;
     color: #222;
 }
+
+
+.hero {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+.summary {
+    font-size: 16px;
+    color: #ccc;
+    margin: 10px 0 15px;
+}
+
+.read-more {
+    font-size: 14px;
+    color: #00bcd4;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: #ffcc00;
+}
+
+body.light-mode .summary {
+    color: #444;
+}
+
+body.light-mode .read-more {
+    color: #007acc;
+}
