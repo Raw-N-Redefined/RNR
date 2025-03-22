@@ -12,14 +12,8 @@
         <a href="index.html">Home</a>
     </div>
     <ul class="nav-center">
+        <li><a href="AllPosts1.html">All Insights</a></li>
     </ul>
-    <div class="toggle-container">
-        <label class="switch">
-            <input type="checkbox" id="modeToggle">
-            <span class="slider round"></span>
-        </label>
-        <span id="modeLabel">Dark Mode</span>
-    </div>
 </nav>
 
 <header class="hero-section">
@@ -30,17 +24,17 @@
 <section class="latest-section">
     <div class="latest-header">
         <h2>Latest Insights</h2>
-        <a href="#" class="see-more">See More →</a>
+        <a href="AllPosts1.html" class="see-more">See More →</a>
     </div>
     <div class="insight-list">
         <article class="insight-card">
             <h3><a href="posts/post1.html">Can TikTok Predict Elections?</a></h3>
-            <p>TikTok’s comment spikes may reflect real-time political sentiment. Here’s how it aligns with voting patterns.</p>
+            <p>TikTok’s comment spikes reflect real-time political sentiment. See how it aligns with actual voting.</p>
             <a href="posts/post1.html" class="read-more">Read More</a>
         </article>
         <article class="insight-card">
             <h3><a href="posts/post2.html">Are Gas Prices Tied to Tweets?</a></h3>
-            <p>Could angry tweets foreshadow fuel hikes? Our correlation study reveals which signals matter.</p>
+            <p>Could angry tweets foreshadow fuel hikes? A correlation study to find which signals matter.</p>
             <a href="posts/post2.html" class="read-more">Read More</a>
         </article>
     </div>
@@ -49,15 +43,5 @@
 <footer>
     <p>&copy; 2025 Raw & Redefined. All Rights Reserved.</p>
 </footer>
-
-<script>
-    const toggle = document.getElementById('modeToggle');
-    const label = document.getElementById('modeLabel');
-    const body = document.body;
-    toggle.addEventListener('change', function () {
-        body.classList.toggle('light-mode');
-        label.textContent = body.classList.contains('light-mode') ? 'Light Mode' : 'Dark Mode';
-    });
-</script>
 </body>
 </html>
