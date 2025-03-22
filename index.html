@@ -3,25 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RNR Blog</title>
+    <title>Raw & Redefined Blog</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="posts/post1.html">First Blog Post</a></li>
-        <li><a href="posts/post2.html">Second Blog Post</a></li>
-    </ul>
+    <nav>
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="modeToggle">
+            <span class="slider round"></span>
+        </label>
+        <span id="modeLabel">Dark Mode</span>
+    </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="posts/post1.html">TikTok & Elections</a></li>
+            <li><a href="posts/post2.html">Tweets & Gas Prices</a></li>
+        </ul>
     </nav>
-    <h1>Welcome to Raw & Redefined</h1>
-    <p>This is a blog about data science, analytics, and technology insights.</p>
-<ul>
-    <li><a href="posts/post1.html">First Blog Post</a></li>
-    <li><a href="posts/post2.html">Second Blog Post (with Image)</a></li>
-</ul>
-<footer>
-    <p>&copy; 2025 Raw & Redefined. All Rights Reserved.</p>
-</footer>
+    <header>
+        <h1>Raw & Redefined</h1>
+        <p class="subtitle">Answering questions with data, storytelling, and a touch of rebellion.</p>
+    </header>
+
+    <main class="post-list">
+        <div class="post-link">
+            <h2><a href="posts/post1.html">Can TikTok Predict Elections?</a></h2>
+            <p>Exploring the correlation between TikTok comment activity and election outcomes.</p>
+        </div>
+        <div class="post-link">
+            <h2><a href="posts/post2.html">Are Gas Prices Tied to Tweets?</a></h2>
+            <p>Using tweet volume and gas price data to uncover predictive trends in public chatter.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Raw & Redefined. All Rights Reserved.</p>
+    </footer>
+
+<script>
+    const toggle = document.getElementById('modeToggle');
+    const label = document.getElementById('modeLabel');
+    const body = document.body;
+
+    toggle.addEventListener('change', function () {
+        body.classList.toggle('light-mode');
+        label.textContent = body.classList.contains('light-mode') ? 'Light Mode' : 'Dark Mode';
+    });
+</script>
 </body>
 </html>
